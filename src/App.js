@@ -21,25 +21,98 @@ function App() {
       
         /* compares id of seat clicked to select correct colors */
         /* DRIVER */
-        if(e.currentTarget.id === "driver" && isActive){
-          if(e.currentTarget.style.background === "red"){
-            e.currentTarget.style.background = ""
-          } else {
-            e.currentTarget.style.background = "red"
-          }
-        } else if (e.currentTarget.id === "driver") {
-          e.currentTarget.style.background = "red"
-        /* PASSENGER */
-        } else if (e.currentTarget.id === "passenger" && isActive){
-          if(e.currentTarget.style.background === "purple"){
-            e.currentTarget.style.background = ""
-          } else {
-            e.currentTarget.style.background = "purple"
-          }
-        } else if (e.currentTarget.id === "passenger") {
-          e.currentTarget.style.background = "purple"
+      if (e.currentTarget.id === "driver" && isActive){
+        if(e.currentTarget.src === "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"){
+          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
+        } else {
+          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"
         }
+      } else if (e.currentTarget.id === "driver") {
+        e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
       
+        /* PASSENGER */
+      } else if (e.currentTarget.id === "passenger" && isActive){
+        if(e.currentTarget.src === "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"){
+          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
+        } else {
+          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"
+        }
+      } else if (e.currentTarget.id === "passenger") {
+        e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
+        /* backseat passenger top */
+      } else if (e.currentTarget.id === "back-seat-1" && isActive){
+        if(e.currentTarget.src === "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"){
+          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
+        } else {
+          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"
+        }
+      } else if (e.currentTarget.id === "back-seat-1") {
+        e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
+      
+        /* backseat passenger btm */
+        } else if (e.currentTarget.id === "back-seat-2" && isActive){
+          if(e.currentTarget.src === "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"){
+            e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
+          } else {
+            e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"
+          }
+        } else if (e.currentTarget.id === "back-seat-2") {
+          e.currentTarget.src = "./buckle-up-warning.png"
+
+          // Driver door lock and unlocked icon
+        } else if (e.currentTarget.id === "driver-door" && isActive){
+          if(e.currentTarget.src === "./locked-symbol.png"){
+            e.currentTarget.src = "./unlocked-warning.png"
+          } else {
+            e.currentTarget.src = "./locked-symbol.png"
+          }
+        } else if(e.currentTarget.id === "driver-door"){
+          e.currentTarget.src = "./unlocked-warning.png";
+        
+        // Passenger door lock and unlocked icon
+        } else if (e.currentTarget.id === "passenger-door" && isActive){
+            if(e.currentTarget.src === "./locked-symbol.png"){
+              e.currentTarget.src = "./unlocked-warning.png"
+            } else {
+              e.currentTarget.src = "./locked-symbol.png"
+            }
+        } else if(e.currentTarget.id === "passenger-door"){
+            e.currentTarget.src = "./unlocked-warning.png";
+        
+        // Top back door lock and unlocked icon
+        } else if (e.currentTarget.id === "back-seat-1-door" && isActive){
+          if(e.currentTarget.src === "./locked-symbol.png"){
+            e.currentTarget.src = "./unlocked-warning.png"
+          } else {
+            e.currentTarget.src = "./locked-symbol.png"
+          }
+        } else if(e.currentTarget.id === "back-seat-1-door"){
+            e.currentTarget.src = "./unlocked-warning.png";
+        
+        // Btm back door lock and unlocked icon
+        } else if (e.currentTarget.id === "back-seat-2-door" && isActive){
+          if(e.currentTarget.src === "./locked-symbol.png"){
+            e.currentTarget.src = "./unlocked-warning.png"
+          } else {
+            e.currentTarget.src = "./locked-symbol.png"
+          }
+        } else if(e.currentTarget.id === "back-seat-2-door"){
+            e.currentTarget.src = "./unlocked-warning.png";
+        
+        // Trunk weight indicator
+        } else if (e.currentTarget.id === "trunk" && isActive){
+          if(e.currentTarget.style.backgroundColor === "rgb(195, 195, 195)"){
+            e.currentTarget.style.backgroundColor = "black"
+            e.currentTarget.style.color = "white"
+            console.log(e.currentTarget.style.color)
+          } else {
+            e.currentTarget.style.backgroundColor = "rgb(195, 195, 195)"
+            e.currentTarget.style.color = "black"
+          }
+        } else if(e.currentTarget.id === "trunk"){
+            e.currentTarget.style.backgroundColor = "rgb(195, 195, 195)";
+            e.currentTarget.style.color = "black"
+        }
     };
 
 
@@ -51,59 +124,47 @@ function App() {
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,200" />
         
         <div class="navbar">
-          <button type="button" class="col-2" id="gps-button">
-            <i class="material-symbols-rounded">explore</i>
-          </button>
-          <button type="button" class="col-2" id="bluetooth-button" >
-            <i class="material-symbols-rounded">bluetooth</i>
-          </button>
-        </div>
-        <div class="col-5 media-player-navigation">
-            <button type="button" id="previous-media-button">
-              <i class="material-symbols-rounded">arrow_back_ios</i>
-            </button>
-            <p>Current Song - Current Artist...</p>
-            <button type="button" id="next_media_button">
-              <i class="material-symbols-rounded">arrow_forward_ios</i>
-            </button>
-          
-          <button type="button" id="thermostat-button">
-            <i class="material-symbols-rounded">thermostat</i>
-          </button>
-          
-
-          
-        </div>
-
-        <div class="sub-navbar">
-          <p>This is where apps, mapping, notices buttons will go</p>
+          <p>WELCOME</p>
         </div>
       </header>
 
       <body>
-        <p>This is where the currently selected display will go.</p>
+        <div class="side-bar col-6">
+          <img id="map-img" src="./map-screenshot.jpg"/>
 
-        <div class="interior-map">
-          <div class="front-seats col-4">
-            <img id="driver" src="https://static.thenounproject.com/png/4939260-200.png" alt="car seat image"
-              onClick={handleClick}
-            />
-
-            <img id="passenger" src="https://static.thenounproject.com/png/4939260-200.png" alt="car seat image"
-              onClick={handleClick}
-            />
-          </div>
-          
+          <div class="media-player">
+            <img id="media-player-album-cover" src="https://upload.wikimedia.org/wikipedia/en/1/1b/Adele_-_21.png"/>
+            <p>ADELE SONG - BY ADELE</p>
+          </div> 
         </div>
 
+        
 
+        <div class="interior-map">
+          <div class="front-seats col-3">
+            <img id="passenger-door" src="./locked-symbol.png" onClick={handleClick}/>
+            <br/>
+            <img id="driver" src="https://cdn-icons-png.flaticon.com/512/5102/5102957.png" alt="car seat image" onClick={handleClick}/>
+            <br/>
+            <img id="passenger" src="https://cdn-icons-png.flaticon.com/512/5102/5102957.png" alt="car seat image" onClick={handleClick} />
+            <br/>
+            <img id="driver-door" src="./locked-symbol.png" onClick={handleClick}/>
+          </div>
 
-      <h1> TESTING CARSEAT </h1>
-
-
-      <h1>
-        jfeiowajf
-      </h1>
+          <div class="back-seats col-3">
+            <img id="back-seat-1-door" src="./locked-symbol.png" onClick={handleClick}/>
+            <br/>
+            <img id="back-seat-1" src="https://cdn-icons-png.flaticon.com/512/5102/5102957.png" alt="car seat image" onClick={handleClick}/>
+            <br/>
+            <img id="back-seat-2" src="./buckle-up-warning.png" alt="car seat image" onClick={handleClick} />
+            <br/>
+            <img id="back-seat-2-door" src="./locked-symbol.png" onClick={handleClick}/>
+          </div>
+          
+          <div class="trunk col-3" id="trunk" onClick={handleClick}>
+            <p>trunk: empty</p>
+          </div>
+        </div>
 
       </body>
     </div>

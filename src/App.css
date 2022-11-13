@@ -15,6 +15,34 @@ body{
   background-color: green;
 }
 
+
+/* interior mapping CSS */
+/* parent */
+#interior-map{
+  white-space: nowrap;
+}
+
+/* children */
+.front-seats{
+  outline-style: solid;
+  outline-color: blue;
+  display: inline-block;
+}
+
+.back-seats{
+  outline-style: solid;
+  outline-color: red;
+  display: inline-block;
+}
+
+.trunk{
+  outline-style: solid;
+  outline-color: black;
+  border-radius: 2px;
+  height: 500px;
+  display: inline-block;
+}
+
 /* DESKTOP */
 @media only screen and (min-width: 768px) {
   .col-1 {width: 8.33%;}

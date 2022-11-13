@@ -10,31 +10,68 @@
   background-color: rgb(88, 89, 91);
 }
 
+.subbutton {
+  background-color:rgb(195, 195, 195);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 50px;
+  cursor: pointer;
+  border-radius: 200px;
+  width: 150px;
+}
+
+.subbutton:hover {
+  background-color:rgb(240, 100, 112);
+  transition: 0.7s;
+}
+.subbutton:active {
+  background-color: rgb(240, 100, 112);
+}
+
 body{
   width: 100%;
   background-color: rgb(195, 195, 195);
 }
 
-.buttons {
+button{
+  width: 100%; 
+  border-radius: 16px;
+  background-color:rgb(195, 195, 195);
+  text-align: left;
+  height: 70px;
+  font-size: 25px;
+  margin-top: 1px;
+
+}
+
+
+.settingButtons{
+  
   display: grid;
-  grid-template: repeat(3, minmax(0, 1fr)) / repeat(3, minmax(0, 1fr));
-  gap: 2.5vw;
-  padding: 2.5vw;
-  justify-content: center;
-  box-sizing: border-box;
-  margin-right: 250px;
-  
+  margin-top: 1rem;
   
 }
 
-input{
-  border-radius: 50px;
-}
-
-img {
-  width: 100px;
+h2{
+  display: block;
+  font-weight: bold;
+  font-size: 2em;
+  width: 100%;
+  background: linear-gradient(to right, rgb(223, 36, 51), rgba(255, 0, 0, 0));
+  margin-bottom: 0;
+ 
   
 }
+
+button:hover{
+  background-color:rgb(240, 100, 112);
+  transition: 0.7s;
+}
+
 /* DESKTOP */
 @media only screen and (min-width: 768px) {
   .col-1 {width: 8.33%;}

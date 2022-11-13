@@ -12,18 +12,33 @@ function App() {
 
       /* When clicked, toggle state */
       const handleClick = e => {
-      setIsActive(current => !current)
-      console.log(e.currentTarget.id)
-      console.log(isActive)
-      if(e.currentTarget.id === "driver" && isActive){
-        if(e.currentTarget.style.background === "red"){
-          e.currentTarget.style.background = "blue"
-        } else {
+        /* changes isActive state to respond to click */
+        setIsActive(current => !current)
+      
+        /* DEBUGGING */
+        console.log(e.currentTarget.id)
+        console.log(isActive)
+      
+        /* compares id of seat clicked to select correct colors */
+        /* DRIVER */
+        if(e.currentTarget.id === "driver" && isActive){
+          if(e.currentTarget.style.background === "red"){
+            e.currentTarget.style.background = ""
+          } else {
+            e.currentTarget.style.background = "red"
+          }
+        } else if (e.currentTarget.id === "driver") {
           e.currentTarget.style.background = "red"
+        /* PASSENGER */
+        } else if (e.currentTarget.id === "passenger" && isActive){
+          if(e.currentTarget.style.background === "purple"){
+            e.currentTarget.style.background = ""
+          } else {
+            e.currentTarget.style.background = "purple"
+          }
+        } else if (e.currentTarget.id === "passenger") {
+          e.currentTarget.style.background = "purple"
         }
-      } else {
-        e.currentTarget.style.background = "red"
-      }
       
     };
 
@@ -71,7 +86,10 @@ function App() {
         <div class="interior-map">
           <div class="front-seats col-4">
             <img id="driver" src="https://static.thenounproject.com/png/4939260-200.png" alt="car seat image"
-              
+              onClick={handleClick}
+            />
+
+            <img id="passenger" src="https://static.thenounproject.com/png/4939260-200.png" alt="car seat image"
               onClick={handleClick}
             />
           </div>

@@ -8,7 +8,9 @@ import { useState } from 'react';
 function App() {
 
       /* Creating states for seat clicks */
-      const [isActive, setIsActive] = useState(false);
+      // DEBUG
+      // const [isActive, setIsActive] = useState(false); 
+      const [isActive, setIsActive] = useState(true); 
 
       /* When clicked, toggle state */
       const handleClick = e => {
@@ -18,6 +20,42 @@ function App() {
         /* DEBUGGING */
         console.log(e.currentTarget.id)
         console.log(isActive)
+        console.log(document.getElementById("jesus-code"))
+        console.log(document.getElementById("jesus-code").style.height)
+
+        // Jesus app section
+        if(e.currentTarget.id === "jesus-section" && isActive){
+          if(document.getElementById("jesus-code").style.visibility === "visible"){
+            document.getElementById("jesus-code").style.visibility = "hidden";
+            document.getElementById("jesus-code").style.height = "0vh"; 
+          } else {
+            document.getElementById("jesus-code").style.visibility = "visible";
+            document.getElementById("jesus-code").style.height = "100vh"; 
+          }
+        }
+
+        // Interior section
+        if(e.currentTarget.id === "interior-section" && isActive){
+          if(document.getElementById("interior-code").style.visibility === "visible"){
+            document.getElementById("interior-code").style.visibility = "hidden";
+            document.getElementById("interior-code").style.height = "0vh"; 
+          } else {
+            document.getElementById("interior-code").style.visibility = "visible";
+            document.getElementById("interior-code").style.height = "100vh"; 
+          }
+        }
+
+        // Settings section
+        if(e.currentTarget.id === "jesus-section-2" && isActive){
+          if(document.getElementById("jesus-code-2").style.visibility === "visible"){
+            document.getElementById("jesus-code-2").style.visibility = "hidden";
+            document.getElementById("jesus-code-2").style.height = "0vh"; 
+          } else {
+            document.getElementById("jesus-code-2").style.visibility = "visible";
+            document.getElementById("jesus-code-2").style.height = "100vh"; 
+          }
+        }
+
       
         /* compares id of seat clicked to select correct colors */
         /* DRIVER */
@@ -123,24 +161,98 @@ function App() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,200" />
         
-        <div class="navbar">
-          <p>WELCOME</p>
+      <div class="navbar">
+          <p>This is navbar. Here is where phone, map, bluetooth will go.</p>
         </div>
+             
+        <div id="subnavbar">
+            <div id="jesus-section" class="button" width="60" height="100" onClick={handleClick}> Apps </div>
+            <div id="interior-section" class="button" width="60" height="100" onClick={handleClick}> Interior </div>
+            <div class="button" width="60" height="100" onClick={handleClick}> Alerts </div>
+            <div id="jesus-section-2" class="button" width="60" height="100" onClick={handleClick}> Settings </div>
+            <div id="elysa-section" class="button" width="60" height="100" onClick={handleClick}> Info </div>
+        </div>
+
       </header>
 
       <body>
-        <div class="side-bar col-6">
-          <img id="map-img" src="./map-screenshot.jpg"/>
 
-          <div class="media-player">
-            <img id="media-player-album-cover" src="https://upload.wikimedia.org/wikipedia/en/1/1b/Adele_-_21.png"/>
-            <p>ADELE SONG - BY ADELE</p>
-          </div> 
+        <div id="elysa-code" class="elysa">
+          <div id="row1">
+            <div>
+              <c> Car Info </c>
+              <p> Car Model: Toyota Supra </p>
+              <p> Car Year: 2022 </p>
+              <p> Car Color: Renaissance Red 2.0 </p>
+              <p> Miles per Gallon: 25 MPG </p>
+              <p> Mileage: 20,000 miles </p>
+              <p> Performance: 255 </p>
+              <p> Horsepower: @ 5,000 - 6,5000 rpm </p>
+            </div>
+            <img src="/red toyota supra 2022.png" alt="car-img"/>
+          </div>
         </div>
 
-        
+        <div id="damian-code" class="damian">
+          <div id="row1-d">  
+            <span>
+            <img src="./issues_images/eng_temp_warning_ligth.png" alt=""/>
+            <p id="anything"> Engine temperature has exceeded normal limits. </p>
+            <div class="linkbutton">
+              <a href="https://www.toyotaguru.us/yaris-manual-2/engine-coolant-temperature-indicator-and-warning-light.html"> solution </a>
+            </div>
+            </span>
+          </div>
 
-        <div class="interior-map">
+          <span class="line"></span>
+
+          <div id="row2-d">  
+            <span>
+            <img src="./issues_images/battery_charge_light.png" alt=""/>
+              <p id="anything"> Car charging system is short of power or is not charging properly.</p>
+              <div class="linkbutton">
+                <a href="https://www.baierltoyota.com/blog/what-does-the-red-battery-light-in-your-toyota-mean/">solution </a>
+              </div>
+            </span>
+          </div>
+
+          <span class="line"></span>
+          
+          <div id="row3-d" >  
+            <span>
+              <img src="./issues_images/oil_pressure_light.png" alt=""/>
+              <p id="anything"> Loss of oil pressure. Lubrication is low or lost completely.</p>
+              <div class="linkbutton">
+                <a href="https://support.toyota.com/s/article/How-often-should-I-ma-10042?language=en_US">solution </a>
+              </div>
+            </span>
+          </div>
+
+        </div>
+
+        <div id="jesus-code" className="jesus">
+          <div class ="buttons">
+            <input  type="image"  class="col-6" name="<Phone>" src="https://i.pinimg.com/originals/84/4e/8c/844e8cd4ab26c82286238471f0e5a901.png" border="border of the image" alt="text"></input>
+            <input  type="image"  class="col-6" name="<Maps>" src="https://logos-download.com/wp-content/uploads/2016/05/Google_Maps_logo_icon.png" border="border of the image" alt="text"></input>
+            <input  type="image"  class="col-6" name="<Spotify>" src="https://www.freepnglogos.com/uploads/spotify-logo-png/file-spotify-logo-png-4.png" border="border of the image" alt="text"></input>
+            <input  type="image"  class="col-6" name="<Settings>" src="https://cdn0.iconfinder.com/data/icons/apple-apps/100/Apple_Settings-512.png" border="border of the image" alt="text"></input>
+            <input  type="image"  class="col-6" name="<Radio>" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGFazZ21dBNQjos8fw3wXhL23GLG7A7dwJpQ&usqp=CAU" border="border of the image" alt="text"></input>
+            <input  type="image"  class="col-6" name="<Info>" src="https://seeklogo.com/images/I/information-desk-symbol-logo-871156055D-seeklogo.com.png" border="border of the image" alt="text"></input>
+          </div>
+        </div>
+
+        <div id="jesus-code-2" class="jesus-settings">
+          <h2>Settings</h2>
+          <div class = "settingButtons">
+            <button type="button">Time and Date</button>
+            <button type="button">Sound Settings</button>
+            <button type="button">AC Settings</button>
+            <button type="button">Lights</button>
+            <button type="button">Navigation Settings</button>
+          </div>
+        </div>
+
+        <div id="interior-code" class="interior-map">
           <div class="front-seats col-3">
             <img id="passenger-door" src="./locked-symbol.png" onClick={handleClick}/>
             <br/>

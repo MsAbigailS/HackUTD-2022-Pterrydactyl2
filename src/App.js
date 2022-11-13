@@ -20,8 +20,6 @@ function App() {
         /* DEBUGGING */
         console.log(e.currentTarget.id)
         console.log(isActive)
-        console.log(document.getElementById("jesus-code"))
-        console.log(document.getElementById("jesus-code").style.height)
 
         // Jesus app section
         if(e.currentTarget.id === "jesus-section" && isActive){
@@ -31,6 +29,14 @@ function App() {
           } else {
             document.getElementById("jesus-code").style.visibility = "visible";
             document.getElementById("jesus-code").style.height = "100vh"; 
+            document.getElementById("interior-code").style.visibility = "hidden";
+            document.getElementById("interior-code").style.height = "0vh"; 
+            document.getElementById("elysa-code").style.visibility = "hidden";
+            document.getElementById("elysa-code").style.height = "0vh"; 
+            document.getElementById("damian-code").style.visibility = "hidden";
+            document.getElementById("damian-code").style.height = "0vh"; 
+            document.getElementById("jesus-code-2").style.visibility = "hidden";
+            document.getElementById("jesus-code-2").style.height = "0vh"; 
           }
         }
 
@@ -42,6 +48,15 @@ function App() {
           } else {
             document.getElementById("interior-code").style.visibility = "visible";
             document.getElementById("interior-code").style.height = "100vh"; 
+            document.getElementById("jesus-code").style.visibility = "hidden";
+            document.getElementById("jesus-code").style.height = "0vh"; 
+            document.getElementById("elysa-code").style.visibility = "hidden";
+            document.getElementById("elysa-code").style.height = "0vh"; 
+            document.getElementById("damian-code").style.visibility = "hidden";
+            document.getElementById("damian-code").style.height = "0vh"; 
+            document.getElementById("jesus-code-2").style.visibility = "hidden";
+            document.getElementById("jesus-code-2").style.height = "0vh"; 
+
           }
         }
 
@@ -53,23 +68,59 @@ function App() {
           } else {
             document.getElementById("jesus-code-2").style.visibility = "visible";
             document.getElementById("jesus-code-2").style.height = "100vh"; 
+            document.getElementById("interior-code").style.visibility = "hidden";
+            document.getElementById("interior-code").style.height = "0vh"; 
+            document.getElementById("elysa-code").style.visibility = "hidden";
+            document.getElementById("elysa-code").style.height = "0vh"; 
+            document.getElementById("damian-code").style.visibility = "hidden";
+            document.getElementById("damian-code").style.height = "0vh"; 
+            document.getElementById("jesus-code").style.visibility = "hidden";
+            document.getElementById("jesus-code").style.height = "0vh"; 
           }
         }
 
+        // Info Section
+        if(e.currentTarget.id === "elysa-section" && isActive){
+          if(document.getElementById("elysa-code").style.visibility === "visible"){
+            document.getElementById("elysa-code").style.visibility = "hidden";
+            document.getElementById("elysa-code").style.height = "0vh"; 
+          } else {
+            document.getElementById("elysa-code").style.visibility = "visible";
+            document.getElementById("elysa-code").style.height = "100vh";
+            document.getElementById("interior-code").style.visibility = "hidden";
+            document.getElementById("interior-code").style.height = "0vh"; 
+            document.getElementById("jesus-code").style.visibility = "hidden";
+            document.getElementById("jesus-code").style.height = "0vh"; 
+            document.getElementById("damian-code").style.visibility = "hidden";
+            document.getElementById("damian-code").style.height = "0vh"; 
+            document.getElementById("jesus-code-2").style.visibility = "hidden";
+            document.getElementById("jesus-code-2").style.height = "0vh";  
+          }
+        }
+
+       // Alerts sections
+       if(e.currentTarget.id === "damian-section" && isActive){
+        if(document.getElementById("damian-code").style.visibility === "visible"){
+          document.getElementById("damian-code").style.visibility = "hidden";
+          document.getElementById("damian-code").style.height = "0vh"; 
+        } else {
+          document.getElementById("damian-code").style.visibility = "visible";
+          document.getElementById("damian-code").style.height = "100vh"; 
+          document.getElementById("interior-code").style.visibility = "hidden";
+          document.getElementById("interior-code").style.height = "0vh"; 
+          document.getElementById("jesus-code").style.visibility = "hidden";
+          document.getElementById("jesus-code").style.height = "0vh"; 
+          document.getElementById("elysa-code").style.visibility = "hidden";
+          document.getElementById("elysa-code").style.height = "0vh"; 
+          document.getElementById("jesus-code-2").style.visibility = "hidden";
+          document.getElementById("jesus-code-2").style.height = "0vh";  
+        }
+      }
+
       
         /* compares id of seat clicked to select correct colors */
-        /* DRIVER */
-      if (e.currentTarget.id === "driver" && isActive){
-        if(e.currentTarget.src === "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"){
-          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
-        } else {
-          e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"
-        }
-      } else if (e.currentTarget.id === "driver") {
-        e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
-      
         /* PASSENGER */
-      } else if (e.currentTarget.id === "passenger" && isActive){
+      if (e.currentTarget.id === "passenger" && isActive){
         if(e.currentTarget.src === "https://cdn-icons-png.flaticon.com/512/5102/5102816.png"){
           e.currentTarget.src = "https://cdn-icons-png.flaticon.com/512/5102/5102957.png"
         } else {
@@ -140,7 +191,7 @@ function App() {
         // Trunk weight indicator
         } else if (e.currentTarget.id === "trunk" && isActive){
           if(e.currentTarget.style.backgroundColor === "rgb(195, 195, 195)"){
-            e.currentTarget.style.backgroundColor = "black"
+            e.currentTarget.style.backgroundColor = "grey"
             e.currentTarget.style.color = "white"
             console.log(e.currentTarget.style.color)
           } else {
@@ -162,13 +213,26 @@ function App() {
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,200" />
         
       <div class="navbar">
-          <p>This is navbar. Here is where phone, map, bluetooth will go.</p>
-        </div>
+          <div class="nav">
+            <div class="navbutton"> 
+              <div><img src="phone.png" className = "phone"/></div> 
+            </div>
+            <div class="navbutton"> 
+              <div> <img src="maps.png" className = "maps"/> </div>
+            </div>
+            <div class="navbutton"> 
+              <div> <img src="bluetooth.png" className = "bluetooth"/> </div>
+            </div>
+            <img class="media" src="./mediapic.png"></img>
+            {/* <div class="media"> Rewind------Pause-------------------Play------Forward </div> */}
+            <div class="time"> 09:33 PM </div>
+          </div>
+      </div>
              
         <div id="subnavbar">
             <div id="jesus-section" class="button" width="60" height="100" onClick={handleClick}> Apps </div>
             <div id="interior-section" class="button" width="60" height="100" onClick={handleClick}> Interior </div>
-            <div class="button" width="60" height="100" onClick={handleClick}> Alerts </div>
+            <div id="damian-section" class="button" width="60" height="100" onClick={handleClick}> Alerts </div>
             <div id="jesus-section-2" class="button" width="60" height="100" onClick={handleClick}> Settings </div>
             <div id="elysa-section" class="button" width="60" height="100" onClick={handleClick}> Info </div>
         </div>
@@ -256,9 +320,9 @@ function App() {
           <div class="front-seats col-3">
             <img id="passenger-door" src="./locked-symbol.png" onClick={handleClick}/>
             <br/>
-            <img id="driver" src="https://cdn-icons-png.flaticon.com/512/5102/5102957.png" alt="car seat image" onClick={handleClick}/>
-            <br/>
             <img id="passenger" src="https://cdn-icons-png.flaticon.com/512/5102/5102957.png" alt="car seat image" onClick={handleClick} />
+            <br/>
+            <img id="driver" src="https://cdn-icons-png.flaticon.com/512/2/2087.png" alt="car seat image" onClick={handleClick}/>
             <br/>
             <img id="driver-door" src="./locked-symbol.png" onClick={handleClick}/>
           </div>

@@ -280,11 +280,105 @@ body{
   background-color: rgb(223, 36, 51);
 }
 
+.navbutton {
+  background-color:rgb(195, 195, 195);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 150px;
+}
+
+        .navbutton:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .navbutton:active {
+          background-color: rgb(122, 180, 231);
+        }
+
+        .phone{
+          height: 10px;
+        }
+
+        .maps{
+          height: 10px;
+        }
+
+        .bluetooth{
+          height: 10px;
+        }
+
+
+.media {
+  background-color:rgb(195, 195, 195);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 0px;
+  cursor: pointer;
+  border-radius: 200px;
+  width: 450px;
+}
+
+        .media{
+          width: 500px;
+        }
+
+        .media:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .media:active {
+          background-color: rgb(122, 180, 231);
+        }
+
+.time {
+  background-color:rgb(195, 195, 195);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 150px;
+  height: 12px;
+  font-size: larger;
+  font-family: monospace;
+}
+
+        .time:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .time:active {
+          background-color: rgb(122, 180, 231);
+        }
+
 .sub-navbar{
   width: 100%;
   padding: 1.25%;
   background-color: rgb(88, 89, 91);
 }
+
+        .subbutton:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .subbutton:active {
+          background-color: rgb(122, 180, 231);
+        }
 
 body{
   width: 100%;
@@ -496,3 +590,4 @@ input{
   .col-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
 } 
+

@@ -1,6 +1,8 @@
+
 /* eslint-disable jsx-a11y/img-redundant-alt */
 /* eslint-disable jsx-a11y/alt-text */
 import logo from './logo.svg';
+
 import './App.css';
 import CarSeat from './CarSeat';
 import { useState } from 'react';
@@ -219,6 +221,7 @@ function App() {
     <div className="App">
       <header className="App-header">
 
+
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,200" />
         
@@ -249,6 +252,8 @@ function App() {
 
       </header>
 
+
+        
       <body>
 
         <div id="elysa-code" class="elysa">
@@ -352,6 +357,7 @@ function App() {
           </div>
         </div>
 
+        
       </body>
     </div>
   );

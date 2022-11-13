@@ -1,54 +1,103 @@
 .navbar{
   width: 100%; /* Width is 100% of screen */
-  padding: 2%;
+  padding: .5%;
   background-color: rgb(223, 36, 51);
+  display: inline-block;
 }
+
+.navbutton {
+  background-color:rgb(195, 195, 195);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 150px;
+}
+
+        .navbutton:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .navbutton:active {
+          background-color: rgb(122, 180, 231);
+        }
+
+        .phone{
+          height: 10px;
+        }
+
+        .maps{
+          height: 10px;
+        }
+
+        .bluetooth{
+          height: 10px;
+        }
+
+
+.media {
+  background-color:rgb(195, 195, 195);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 0px;
+  cursor: pointer;
+  border-radius: 200px;
+  width: 450px;
+}
+
+        .media{
+          width: 500px;
+        }
+
+        .media:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .media:active {
+          background-color: rgb(122, 180, 231);
+        }
+
+.time {
+  background-color:rgb(195, 195, 195);
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  width: 150px;
+  height: 12px;
+  font-size: larger;
+  font-family: monospace;
+}
+
+        .time:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .time:active {
+          background-color: rgb(122, 180, 231);
+        }
 
 .sub-navbar{
   width: 100%;
-  padding: 1.25%;
-  background-color: rgb(88, 89, 91);
+  padding: .5%;
+  background-color: rgb(88, 89, 91);  
 }
 
-body{
-  width: 100%;
-  background-color: rgb(195, 195, 195);
-}
-
-#row1{
-    width: 100%;
-    align-content: center;
-    white-space: nowrap;
-}
-
-img{
-  background-color: rgb(195, 195, 195);
-  align-items: center;
-  display: inline-block;
-  padding: 3%;
-}
-
-#row1 div{
-  font-size: 200%;
-  justify-content: right;
-  align-items: center;
-  display: inline-block;
-  padding: 2%;
-  width: 40%;
-}
-
-#row1 c{
-  font-size: 250%;
-  justify-content: left;
-  display: inline-block;
-  background-image: linear-gradient(to right,rgb(223, 36, 51), rgb(195, 195, 195));
-  padding: 2%;
-  width: 100%;
-}
-
-
-
-.button {
+.subbutton {
   background-color:rgb(195, 195, 195);
   border: none;
   color: black;
@@ -59,17 +108,52 @@ img{
   margin: 2px 50px;
   cursor: pointer;
   border-radius: 200px;
-  width: 150px
+  width: 150px;
 }
 
-.button:hover {
-  background-color:rgb(240, 100, 112);
-  transition: 0.7s;
+        .subbutton:hover {
+          background-color:rgb(122, 180, 231);
+          transition: 0.7s;
+        }
+        .subbutton:active {
+          background-color: rgb(122, 180, 231);
+        }
+
+body{
+  width: 100%;
+  background-color: rgb(195, 195, 195);
 }
 
-.button:active {
-  background-color: rgb(240, 100, 112);
-}
+        #row1{
+            width: 100%;
+            align-content: center;
+            white-space: nowrap;
+        }
+
+        img{
+          background-color: rgb(195, 195, 195);
+          align-items: center;
+          display: inline-block;
+          padding: 3%;
+        }
+
+        #row1 div{
+          font-size: 200%;
+          justify-content: right;
+          align-items: center;
+          display: inline-block;
+          padding: 1%;
+          width: 40%;
+        }
+
+        #row1 c{
+          font-size: 250%;
+          justify-content: left;
+          display: inline-block;
+          background-image: linear-gradient(to right,rgb(223, 36, 51), rgb(195, 195, 195));
+          padding: 1%;
+          width: 100%;
+        }
 
 /* DESKTOP */
 @media only screen and (min-width: 768px) {

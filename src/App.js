@@ -6,17 +6,31 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div class="navbar">
-          <p>This is navbar. Here is where phone, map, bluetooth will go.</p>
+          <div class="nav">
+            <div class="navbutton"> 
+              <div><img src="phone.png" className = "phone"/></div> 
+            </div>
+            <div class="navbutton"> 
+              <div> <img src="maps.png" className = "maps"/> </div>
+            </div>
+            <div class="navbutton"> 
+              <div> <img src="bluetooth.png" className = "bluetooth"/> </div>
+            </div>
+            <div class="media"> Rewind------Pause-------------------Play------Forward </div>
+            <div class="time"> 09:33 PM </div>
+          </div>
         </div>
-             
-        <div id="subnavbar">
-            <div class="button" width="60" height="100"> Apps </div>
-            <div class="button" width="60" height="100"> Interior </div>
-            <div class="button" width="60" height="100"> Alerts </div>
-            <div class="button" width="60" height="100"> Settings </div>
-            <div class="button" width="60" height="100"> Info </div>
+
+
+        <div class="sub-navbar">     
+              <div class="subbutton"> Apps </div>
+              <div class="subbutton"> Interior </div>
+              <div class="subbutton"> Alerts </div>
+              <div class="subbutton"> Settings </div>
+              <div class="subbutton"> Info </div>
         </div>
       </header>
+
 
         
       <body>
@@ -29,13 +43,12 @@ function App() {
             <p> Car Color: Renaissance Red 2.0 </p>
             <p> Miles per Gallon: 25 MPG </p>
             <p> Mileage: 20,000 miles </p>
-            <p> Performance: 255 </p>
-            <p> Horsepower: @ 5,000 - 6,5000 rpm </p>
+            <p> Performance: 255 Horsepower </p>
           </div>
           <img src="./red toyota supra 2022.png" alt=""/>
         </div>
 
-      
+        
 
         
       </body>

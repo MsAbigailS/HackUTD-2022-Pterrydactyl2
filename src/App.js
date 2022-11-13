@@ -55,8 +55,27 @@ function App() {
             document.getElementById("jesus-code-2").style.height = "100vh"; 
           }
         }
+        // Alerts sections
+        if(e.currentTarget.id === "damian-section" && isActive){
+          if(document.getElementById("damian-code").style.visibility === "visible"){
+            document.getElementById("damian-code").style.visibility = "hidden";
+            document.getElementById("damian-code").style.height = "0vh"; 
+          } else {
+            document.getElementById("damian-code").style.visibility = "visible";
+            document.getElementById("damian-code").style.height = "100vh"; 
+          }
+        }
 
-      
+        // Info Section
+        if(e.currentTarget.id === "elysa-section" && isActive){
+          if(document.getElementById("elysa-code").style.visibility === "visible"){
+            document.getElementById("elysa-code").style.visibility = "hidden";
+            document.getElementById("elysa-code").style.height = "0vh"; 
+          } else {
+            document.getElementById("elysa-code").style.visibility = "visible";
+            document.getElementById("elysa-code").style.height = "100vh"; 
+          }
+        }
         /* compares id of seat clicked to select correct colors */
         /* DRIVER */
       if (e.currentTarget.id === "driver" && isActive){
@@ -162,13 +181,13 @@ function App() {
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,200" />
         
       <div class="navbar">
-          <p>This is navbar. Here is where phone, map, bluetooth will go.</p>
+      <p>This is where all that stuff goes import elysas code here because she did not push</p>
         </div>
              
         <div id="subnavbar">
             <div id="jesus-section" class="button" width="60" height="100" onClick={handleClick}> Apps </div>
             <div id="interior-section" class="button" width="60" height="100" onClick={handleClick}> Interior </div>
-            <div class="button" width="60" height="100" onClick={handleClick}> Alerts </div>
+            <div id="damian-section" class="button" width="60" height="100" onClick={handleClick}> Alerts </div>
             <div id="jesus-section-2" class="button" width="60" height="100" onClick={handleClick}> Settings </div>
             <div id="elysa-section" class="button" width="60" height="100" onClick={handleClick}> Info </div>
         </div>

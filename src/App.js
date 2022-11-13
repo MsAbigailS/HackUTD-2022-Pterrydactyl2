@@ -78,6 +78,16 @@ function App() {
             document.getElementById("jesus-code").style.height = "0vh"; 
           }
         }
+        // Alerts sections
+        if(e.currentTarget.id === "damian-section" && isActive){
+          if(document.getElementById("damian-code").style.visibility === "visible"){
+            document.getElementById("damian-code").style.visibility = "hidden";
+            document.getElementById("damian-code").style.height = "0vh"; 
+          } else {
+            document.getElementById("damian-code").style.visibility = "visible";
+            document.getElementById("damian-code").style.height = "100vh"; 
+          }
+        }
 
         // Info Section
         if(e.currentTarget.id === "elysa-section" && isActive){

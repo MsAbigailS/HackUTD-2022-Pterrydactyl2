@@ -436,11 +436,14 @@ span{
   padding: 2.5vw;
   justify-content: center;
   box-sizing: border-box;
-  margin-right: 250px;
+  margin: auto;
+  width: 70%;
+  place-items:center;
+
 }
 
 input{
-  border-radius: 50px;
+  border-radius: 25px;
 }
 
 .jesus-settings button{

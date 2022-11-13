@@ -15,7 +15,7 @@ function App() {
       </header>
 
       <body>
-        <p>This is where the currently selected display will go.</p>
+        <p>This is where the currently selected hfuorehafoewiaof display will go.</p>
        
         <div class ="buttons">
           <input  type="image"  class="col-6" name="<Phone>" src="https://i.pinimg.com/originals/84/4e/8c/844e8cd4ab26c82286238471f0e5a901.png" border="border of the image" alt="text"></input>
